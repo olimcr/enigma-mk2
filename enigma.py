@@ -39,18 +39,21 @@ def char_to_number(char):
 def number_to_char(number):
     return chr(number+96)
 
-teststring="test"
+teststring="npbc"
+outputString=""
 
 i=0
 while(i<len(teststring)):
-    number=char_to_number(teststring[i])
-    number=firstRotor[number-1]
-    number=secondRotor[number-1]
-    number=thirdRotor[number-1]
-    number=reflector[number-1]
-    number=thirdRotor.index(number)
-    number=secondRotor.index(number+1)
-    number=firstRotor.index(number+1)
+    charNumber=char_to_number(teststring[i])
+    charNumber=firstRotor[charNumber-1]
+    charNumber=secondRotor[charNumber-1]
+    charNumber=thirdRotor[charNumber-1]
+    charNumber=reflector[charNumber-1]
+    charNumber=thirdRotor.index(charNumber)
+    charNumber=secondRotor.index(charNumber+1)
+    charNumber=firstRotor.index(charNumber+1)
     rotate_rotor(1)
-    print(number_to_char(number+1))
+    outputString+=(number_to_char(charNumber+1))
     i+=1
+
+print(outputString)
