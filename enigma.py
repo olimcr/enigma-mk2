@@ -43,13 +43,15 @@ def input_validation(inputString):
     for i in range(len(inputString)):
         if(ord(inputString[i])>96 and ord(inputString[i])<123):
             outputString+=inputString[i]
+        if(ord(inputString[i])>65 and ord(inputString[i])<90):
+            outputString+=inputString[i].lower()
     return outputString
 
-testString=input("Enter lowercase string to encrypt: ")
-testString=input_validation(testString)
+userInputString=input("Enter lowercase string to encrypt: ")
+userInputString=input_validation(userInputString)
 outputString=""
-for i in range(len(testString)):
-    charNumber=char_to_number(testString[i])
+for i in range(len(userInputString)):
+    charNumber=char_to_number(userInputString[i])
     charNumber=firstRotor[charNumber-1]
     charNumber=secondRotor[charNumber-1]
     charNumber=thirdRotor[charNumber-1]
