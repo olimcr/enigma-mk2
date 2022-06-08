@@ -32,19 +32,24 @@ def rotate_rotor(rotorNum):
         case 3:
             push_array(3)
 
-
 def char_to_number(char):
     return ord(char)-96
 
 def number_to_char(number):
     return chr(number+96)
 
-teststring="npbc"
-outputString=""
+def input_validation(inputString):
+    outputString=""
+    for i in range(len(inputString)):
+        if(ord(inputString[i])>96 and ord(inputString[i])<123):
+            outputString+=inputString[i]
+    return outputString
 
-i=0
-while(i<len(teststring)):
-    charNumber=char_to_number(teststring[i])
+testString=input("Enter lowercase string to encrypt: ")
+testString=input_validation(testString)
+outputString=""
+for i in range(len(testString)):
+    charNumber=char_to_number(testString[i])
     charNumber=firstRotor[charNumber-1]
     charNumber=secondRotor[charNumber-1]
     charNumber=thirdRotor[charNumber-1]
