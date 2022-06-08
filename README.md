@@ -7,7 +7,7 @@
 
  Add rotor and reflector swapping
 
- Add rotors 4 and 5 from 42 model enigma
+ Add rotors 4 and 5 from 41 model enigma
 
  Add plug board
 

@@ -43,7 +43,7 @@ def input_validation(inputString):
     for i in range(len(inputString)):
         if(ord(inputString[i])>96 and ord(inputString[i])<123):
             outputString+=inputString[i]
-        if(ord(inputString[i])>64 and ord(inputString[i])<90):
+        if(ord(inputString[i])>64 and ord(inputString[i])<91):
             outputString+=inputString[i].lower()
     return outputString
 
